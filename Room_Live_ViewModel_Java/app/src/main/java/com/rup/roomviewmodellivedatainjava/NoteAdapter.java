@@ -6,14 +6,48 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
+/*
+refactor our RecyclerView.Adapter to a ListAdapter, which has been added in the support library version 27.1.0.
+The ListAdapter is a subclass of the normal RecyclerView adapter,
+that implements AsyncListDiffer to calculate the differences between the old data set and the new one we get
+passed in the LiveData's onChanged method, so we don't have to rely on notifyDataSetChanged to update our adapter.
+AsyncListDiffer runs DiffUtil on a background thread to calculate the differences between two lists and dispatches
+the result to the RecyclerView adapter on the main thread.
+The adapter then internally uses one of the more granular notify methods, like notifyItemRangeInserted,
+notifyItemRangeRemoved or notifyItemRangeChanged,
+which also give us the default RecyclerView insert, remove and update animations.
+We just have to make some small changes in our adapter, like using getItem and submitList instead of our old methods,
+and provide a DiffUtil.ItemCallBack, where we define the list comparison logic in areItemsTheSame and areContentsTheSame.
+Both methods pass us the oldItem and the newItem, which we can then compare for positional and content changes.
+ */
+public class NoteAdapter extends ListAdapter<Note,NoteAdapter.NoteHolder> {
     private List<Note> notes = new ArrayList<>();
     private OnItemClickListener listener;
+
+    public NoteAdapter() {
+        super(DIFF_CALLBACK);
+    }
+
+    private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK = new DiffUtil.ItemCallback<Note>() {
+        @Override
+        public boolean areItemsTheSame(Note oldItem, Note newItem) {
+            return oldItem.getId() == newItem.getId();
+        }
+
+        @Override
+        public boolean areContentsTheSame(Note oldItem, Note newItem) {
+            return oldItem.getTitle().equals(newItem.getTitle()) &&
+                    oldItem.getDescription().equals(newItem.getDescription()) &&
+                    oldItem.getPriority() == newItem.getPriority();
+        }
+    };
 
     @NonNull
     @Override
@@ -29,16 +63,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
         holder.textViewTitle.setText(currentNote.getTitle());
         holder.textViewDescription.setText(currentNote.getDescription());
         holder.textViewPriority.setText(String.valueOf(currentNote.getPriority()));
-    }
-
-    @Override
-    public int getItemCount() {
-        return notes.size();
-    }
-
-    public void setNotes(List<Note> notes) {
-        this.notes = notes;
-        notifyDataSetChanged();
     }
 
     public Note getNoteAt(int position) {

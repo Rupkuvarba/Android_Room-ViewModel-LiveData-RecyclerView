@@ -16,29 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1f52511-9486-44a8-b846-bd59ad371831" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/AddEditNoteActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/drawable/ic_close.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/drawable/ic_save.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/layout/activity_add_note.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/layout/note_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/menu/add_note_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/menu/main_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Room_Live_ViewModel_Java/app/src/main/java/com/rup/roomviewmodellivedatainjava/NoteAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
